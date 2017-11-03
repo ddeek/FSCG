@@ -19,6 +19,24 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     {
+      resolve: "gatsby-plugin-sass",
+        options: {
+          precision: 8,
+        }
+    },
+    "gatsby-plugin-styled-components",
+      {
+          resolve: "gatsby-plugin-purify-css",
+          options: {
+              /* Defaults */
+              styleId: "gatsby-inlined-css",
+              purifyOptions: {
+                  info: true,
+                  minify: true
+              }
+          }
+      },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
@@ -154,6 +172,6 @@ module.exports = {
           }
         ]
       }
-    }
+    },
   ]
 };

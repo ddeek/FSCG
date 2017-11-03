@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import "../../node_modules/bootstrap/scss/bootstrap.scss";
 import config from "../../data/SiteConfig";
 import "./index.css";
 

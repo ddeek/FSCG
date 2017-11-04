@@ -1,8 +1,10 @@
 import React from "react";
 import Helmet from "react-helmet";
-import "../../node_modules/bootstrap/scss/bootstrap.scss";
 import config from "../../data/SiteConfig";
-import "./index.css";
+import "../../node_modules/bootstrap/scss/bootstrap.scss";
+import "../scss/theme.scss";
+import TopNav from "../components/TopNav";
+import Footer from "../components/Footer/Footer";
 
 export default class MainLayout extends React.Component {
   getLocalTitle() {
@@ -47,7 +49,9 @@ export default class MainLayout extends React.Component {
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
+        <TopNav />
         {children()}
+        <Footer config={config} />
       </div>
     );
   }

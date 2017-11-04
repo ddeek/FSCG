@@ -1,9 +1,10 @@
 import React, {Component} from "react";
+import {Nav} from 'reactstrap';
 
 class TopNav extends Component {
     render() {
         return (
-          <nav className="topbar topbar-sticky topbar-expand-md">
+          <Nav className="topbar topbar-sticky topbar-expand-md">
             <div className="container">
               <div className="topbar-left">
                 <button className="topbar-toggler">&#9776;</button>
@@ -27,7 +28,7 @@ class TopNav extends Component {
                 </ul>
               </div>
             </div>
-          </nav>
+          </Nav>
         );
     }
 }
